@@ -1,0 +1,48 @@
+<div class="container">
+    <nav
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+        id="navbar"
+        [ngClass]="{'white-nav': showScroll}"
+    >
+        <div
+            fxLayout="row"
+            fxFlex.xl="15"
+            fxFlex.lg="15"
+            fxFlex.md="10"
+            fxFlex.sm="10"
+            fxLayoutAlign="flex-end center"
+        >
+            <img id="logo" src="../../../assets/images/logo.png" alt="no_logo">
+        </div>
+        <div
+            fxFlex.xl="50"
+            fxFlex.lg="50"
+            fxFlex.md="75"
+            fxFlex.sm="75"
+            fxLayout="row"
+            fxLayoutAlign="space-evenly center"
+        >
+            <span fxFlex="10" >Products</span>
+            <span fxFlex="10" >Solutions</span>
+            <span fxFlex="10" >Pricing</span>
+            <div fxFlex="15">
+                <custom-button
+                    [transparent]="true"
+                    [label]="'Login'"
+                    (buttonClicked)="login()"
+                >
+                </custom-button>
+            </div>
+            <div fxFlex="20">
+                <custom-button
+                    [transparent]="false"
+                    [label]="'Get Started'"
+                    (buttonClicked)="getStarted()"
+                >
+                </custom-button>
+            </div>
+        </div>
+    </nav>
+    <router-outlet></router-outlet>
+</div>

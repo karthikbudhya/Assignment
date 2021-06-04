@@ -1,0 +1,35 @@
+@import '../../../../styles//variables/colors';
+@import '../../../../styles//variables/variables';
+
+#account-info {
+    h1, p {
+        @extend .FontStyle;
+    }
+    h1 {
+        color: $text-black;
+        @include font-size(45px);
+        margin-top: 0%;
+    }
+    h1:nth-of-type(1) {
+        margin-bottom: 3% !important;
+    }
+    p {
+        color: $text-grey;
+        @include font-size(18px);
+    }
+    p:nth-of-type(1) {
+        margin-bottom: 0% !important;
+    }
+    p:last-of-type {
+        margin-top: 0%;
+    }
+    custom-button {
+        width: 60%;
+    }
+    div {
+        background: $grey-strip 0% 0% no-repeat padding-box;
+        border-radius: 13px;
+        height: 6px;
+        width: 30%;
+    }
+}

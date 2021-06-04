@@ -1,0 +1,131 @@
+<div
+    fxLayout="row"
+    fxLayoutAlign="space-between"
+    id="container"
+    fxFlex="100"
+>
+    <div
+        fxLayout="row"
+        fxFlex.xl="50"
+        fxFlex.lg="40"
+        fxFlex.md="43"
+        fxLayoutAlign="center"
+        class="bg-img"
+    >
+        <div
+            fxLayout="column" 
+            fxLayoutGap="30px"
+            id="illustration"
+        >
+            <div id="title">
+                <p> we make it super </p>
+                <p> simple </p>
+                <div class="black-strip"></div>
+            </div>
+             <img src="../../../../assets/images/collect_img.png" alt="no_collect_img">
+        </div>
+    </div>
+    <div
+        fxLayout="row"
+        fxFlex.xl="50"
+        fxFlex.lg="50"
+        fxFlex.md="55"
+        fxLayoutAlign="center"
+        fxLayoutGap="10px"
+    >
+        <div
+            fxLayout="column"
+            fxFlex.xl="45"
+            fxFlex.lg="45"
+            fxFlex.md="60"
+        >
+            <div fxLayout="row" fxLayoutAlign="center center" class="criteria-title">
+                Eligibility criteria
+            </div>
+            <div fxLayout="column" class="calculator-content" fxLayoutGap="30px">
+                <div fxLayout="column" fxLayoutGap="5px" class="details">
+                    <span>Monthly Income</span>
+                    <p>₹ 1,50,000</p>
+                    <slider
+                        [minValue]="100000"
+                        [maxValue]="300000"
+                        [value]="200000"
+                        [step]="1"
+                    >
+                    </slider>
+                    <div fxLayout="row" fxLayoutAlign="space-between center" class="range">
+                        <span>₹ 100,000</span>
+                        <span>₹ 3,00,000</span>
+                    </div>
+                </div>
+                <div fxLayout="column" fxLayoutGap="5px" class="details">
+                    <span>Monthly Expenses</span>
+                    <p>₹ 50,000</p>
+                    <slider
+                        [minValue]="0"
+                        [maxValue]="50000"
+                        [value]="30000"
+                        [step]="1"
+                    >
+                    </slider>
+                </div>
+                <div fxLayout="column" fxLayoutGap="5px" class="details">
+                    <span>Repayment Tenure</span>
+                    <select>
+                        <option
+                            *ngFor="let duration of tenurePeriod"
+                            [value]="duration.value"
+                        >
+                            {{duration.label}}
+                        </option>
+                    </select>
+                </div>
+                <div class="details" fxLayout="row" fxLayoutAlign="space-between center">
+                    <span>Do you have existing loans ?</span>
+                    <custom-switch></custom-switch>
+                </div>
+               
+                <div fxLayout="column" fxLayoutGap="5px" class="details">
+                    <span>EMI of existing loan(optional)</span>
+                    <input type="text" placeholder="₹ 15000">
+                </div>
+            </div>
+        </div>
+
+        <div
+            fxLayout="column"
+            fxLayoutAlign="center center"
+            fxFlex.xl="20"
+            fxFlex.lg="20"
+            fxFlex.md="30"
+        >
+            <div
+                fxLayout="column"
+                fxFlex="50"
+                fxLayoutAlign="center center"
+                class="amount-container"
+            >
+                <div
+                    fxLayout="column"
+                    fxFlex="25"
+                    class="amount-details"
+                    fxLayoutAlign="center center"
+                >
+                    <span>Loan Amount</span>
+                    <span>₹ 1,40,000</span>
+                </div>
+                <div 
+                    fxLayout="column"
+                    fxFlex="25"
+                    class="amount-details"
+                    fxLayoutAlign="center center"
+                >
+                    <span>Loan Amount</span>
+                    <span>₹ 1,40,000</span>
+                </div>
+                <button>GET MONEY</button>
+            </div>
+            
+        </div>
+    </div>
+</div>

@@ -1,0 +1,42 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/variables/variables';
+
+#card {
+    padding: 5%;
+    box-shadow: 0px 0px 30px $light-grey;
+    border: 1px solid $white;
+    border-radius: 20px;
+    background-color: $bg-grey;
+    height: 250px;
+    img {
+        width: 80px;
+    }
+    h4 {
+        color: $text-black;
+        @include font-size(20px);
+    }
+    p, h4 {
+        @extend .FontStyle;
+        margin: 0%
+    }
+    p {
+        @include font-size(16px);
+        color: $text-grey;
+    }
+}
+#card:hover {
+    cursor: pointer;
+    background-color: $blue-whites-shade;
+    opacity: 0.75;
+    border: none;
+    h4, p {
+        color: $white;
+    }
+}
+
+// media queries
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+   #card {
+       height: auto !important;
+   } 
+}

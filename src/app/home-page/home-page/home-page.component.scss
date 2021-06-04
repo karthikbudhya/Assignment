@@ -1,0 +1,37 @@
+@import '../../../styles/variables/variables';
+@import '../../../styles/variables/colors';
+
+#navbar {
+    height: 10%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    transition: 0.5s ease-out;
+    z-index: 999;
+    span {
+        @extend .FontStyle;
+        @include font-size(25px);
+        color: $text-black;
+        @include cursor-poiter(pointer);
+    }:hover {
+        color: $dark-blue;
+    }
+}
+
+.white-nav {
+    background: $white;
+    box-shadow: 0px 0px 18px 1px rgba(0, 0, 0, 0.1);
+    transition: 0.5s ease-in;
+}
+#logo {
+    height: 80px;
+}
+.container {
+    background-color: $bg-light-grey;
+}
+// media queries
+@media(min-width: 600px) and (max-width: 959px) {
+    #navbar span {
+        @include font-size(20px);
+    }
+}

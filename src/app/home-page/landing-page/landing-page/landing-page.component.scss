@@ -1,0 +1,17 @@
+.bg-wave {
+    background-image: url('../../../../assets/images/wave.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 936px;
+    padding: 2% 0%;
+}
+.multiple-imgs {
+    background-image:
+        url('../../../../assets/images/left-ball.svg'),
+        url('../../../../assets/images/right-ball.svg'),
+        url('../../../../assets/images/dots.svg'),;
+    background-repeat: no-repeat;
+    width: 100%;
+    background-position: center left ,right bottom, right bottom;
+}

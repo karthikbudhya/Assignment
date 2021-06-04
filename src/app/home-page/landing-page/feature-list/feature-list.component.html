@@ -1,0 +1,65 @@
+<div
+    fxLayout="row"
+    fxLayoutAlign="space-between"
+    fxFlex="100"
+>
+    <div
+        fxLayout="row"
+        fxLayoutGap="40px"
+        fxFlex="60"
+        fxLayoutAlign="center center"
+    >
+        <div
+            fxLayout="column"
+            fxLayoutGap="15px"
+            fxFlex.xl="32"
+            fxFlex.lg="40"
+            fxFlex.md="45"
+            fxFlex.sm="45"
+        >
+            <ng-container *ngFor="let feature of features.featureList_1">
+                <feature-card [cardData]="feature"></feature-card>
+            </ng-container>
+        </div>
+        <div
+            fxLayout="column"
+            fxLayoutGap="15px"
+            fxLayoutAlign="center center"
+            fxFlex.xl="32"
+            fxFlex.lg="40"
+            fxFlex.md="45"
+            fxFlex.sm="45"
+        >
+            <ng-container *ngFor="let feature of features.featureList_2">
+                <feature-card  [cardData]="feature"></feature-card>
+            </ng-container>
+        </div>
+    </div>
+    <div
+        fxLayout="row"
+        fxFlex.xl="40"
+        fxFlex.lg="40"
+        fxFlex.md="37"
+        fxFlex.sm="37"
+        fxLayoutAlign="flex-start center"
+    >
+        <div
+            fxLayout="column"
+            fxLayoutAlign="flex-start"
+            id="account-info"
+            fxLayoutGap="40px"
+        >
+            <h1>Boost your business</h1> 
+            <h1>with Open</h1>
+            <div></div>
+            <p>Get your hands on a term loan that’s</p>
+            <p>crafted for your business</p>
+            <custom-button
+                [transparent]="true"
+                [label]="'Get an Open Account'"
+                (buttonClicked)="openAccount()"
+            >
+            </custom-button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,128 @@
+@import '../../../../styles/variables/colors';
+@import '../../../../styles/variables/variables';
+
+#container {
+    margin-top: 7%
+}
+#illustration {
+    img {
+        width: 500px;
+    }
+}
+.black-strip {
+    background: $bg-black 0% 0% no-repeat padding-box;
+    border-radius: 13px;
+    height: 4px;
+}
+#title {
+    p {
+        @extend .FontStyle;
+        @include font-size(55px);
+        color: $text-black;
+        margin-bottom: 5%;
+        margin-top: 0%;
+    }
+    div {
+        width: 50%;
+    }
+}
+.calculator-content {
+    padding: 5% 5% 10% 5%;
+    background-color: $white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.details {
+    span {
+        @extend .FontStyle;        
+    }
+    span:nth-child(1) {
+        @include font-size(17px);
+        color: $text-black;
+    }
+    p {
+        @include font-size(25px);
+        color: $text-black;
+    }
+    input {
+        height: 30px;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $light-grey;
+        @include font-size(25px);
+    }
+    select {
+        height: 30px;
+        border: none;
+        border-bottom: 1px solid $text-grey;
+        cursor: pointer;
+        outline: none;
+        @include font-size(20px);
+    }
+}
+.range {
+    span {
+        color: $text-grey !important;
+        @include font-size(14px);
+    }
+}
+.criteria-title {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 3%;
+    background-color: $light-grey;
+    @extend .FontStyle;
+    @include font-size(25px);
+}
+.criteria-info {
+    background-color: $white;
+    padding: 5%;
+}
+.amount-details {
+    span {
+        color: $white;
+        @include font-size(18px);
+    }
+    span:first-child {
+        color: $text-grey;
+    }
+    span:last-child {
+        @include font-size(25px);
+    }
+}
+.amount-container {
+    background-color: $dark-blue;
+    opacity: 0.95;
+    width: 100%;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    button {
+        width: 150px;
+        height: 50px;
+        border-radius: 24px;
+        @include font-size(14px);
+        color: $text-black;
+        border: none;
+        background-color: $white;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: $dark-blue; 
+    }
+}
+.bg-img {
+    background-image: url('../../../../assets/images/dots.svg');
+    background-repeat: no-repeat;
+    background-position: right center;
+}
+// media queries
+@media screen and (min-width: 960px) and (max-width: 1279px) {
+    #illustration {
+        img {
+            width: 350px !important;
+        }
+    }
+    #container {
+        margin-top: 10%
+    }
+ }
